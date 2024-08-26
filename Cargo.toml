@@ -1,0 +1,12 @@
+[package]
+name = "triangle_sides"
+version = "0.1.0"
+edition = "2021"
+authors = ["Maldiran <maldiran@maldiran.com>"]
+categories = ["mathematics"]
+description = "Rust crate for calculating various properties of the triangle. Does not use points, but sides lengths for constructing a triangle"
+license = "MIT"
+repository = "https://github.com/Maldiran/triangle_sides"
+keywords = ["math", "mathematics", "triangle", "triangles", "sides"]
+
+[dependencies]

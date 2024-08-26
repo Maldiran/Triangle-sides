@@ -18,7 +18,7 @@ The `[Option<f64>; 3]` data are ordered in a specific way:
 -   Medians: This starts from the middle of the side of a given index.  
 -   Sines, cosines, tangents: Their index corresponds to the angle.
 
-A new struct is created using the method `new(sides: [Option<f64>; 3], angles: [Option<f64>; 3])`. It calculates all properties at creation time. Some fields of the above function can be left as `None`. If the triangle can be constructed from the given data, the function will return `Some(Triangle)`, if not you will get `None`. Angles specified in the above function are used only to calculate sides, they are discarded later, so there can be a situation when someone inputs angle 0.5000 and gets 0.4999 from the struct.
+A new struct is created using the method `new(sides: [Option<f64>; 3], angles: [Option<f64>; 3])`. It calculates all properties at creation time. Some fields of the above function can be left as `None`. If the triangle can be constructed from the given data, the function will return `Some(Triangle)`, if not you will get `None`. Angles specified in the above function are used only to calculate sides, they are discarded later, so there can be a situation when someone inputs angle 0.5000 and gets 0.4999 from the struct. Sides always take precedence over the angles, so if you provide incorrect angle, but the side data will be sufficient, it will not be taken into consideration and the function will return Some(Triangle).
 
 Another way to create the struct is through the `new_from_sides(sides: [f64; 3])` method, which takes just the lengths of the sides. This is slightly faster than the previous method.
 
